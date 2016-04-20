@@ -26,7 +26,7 @@ namespace :uberspace do
           end
 
           config[env] = {
-              'clients' => default_params
+              'sessions' => default_params
           }
         end
 
