@@ -9,7 +9,7 @@ namespace :uberspace do
 
           if fetch(:mongo_uri, false)
             default_params = {'default' => {
-                'uri' => "#{fetch(:mongoid_uri)}"
+                'uri' => "#{fetch(:mongo_uri)}"
 
             }}
           else
@@ -25,9 +25,8 @@ namespace :uberspace do
             }}
           end
 
-          config[env] = {
-              'sessions' => default_params
-          }
+          config[env] = {'sessions' => default_params,
+                         'options' => {raise_not_found_error: false}}
         end
 
         execute "mkdir -p #{shared_path}/config"
