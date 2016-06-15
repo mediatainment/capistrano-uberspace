@@ -25,7 +25,7 @@ namespace :uberspace do
             }}
           end
 
-          config[env] = {'sessions' => default_params,
+          config[env] = {'clients' => default_params,
                          'options' => {raise_not_found_error: false}}
         end
 
