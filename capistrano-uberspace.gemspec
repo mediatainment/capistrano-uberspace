@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = 'capistrano-uberspace'
-  gem.version       = '1.1.1'
+  gem.version       = '1.1.2'
   gem.authors       = ['Philipp Tessenow']
   gem.email         = ['philipp@tessenow.org']
   gem.description   = %q{uberspace support for your rails app for Capistrano 3.x}
@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
-  gem.add_dependency 'capistrano', '~> 3.4.0'
+  gem.add_dependency 'capistrano', '~> 3.4.1'
   gem.add_dependency 'capistrano-rails'
   gem.add_dependency 'capistrano-bundler'
   gem.add_dependency 'inifile', '~> 3.0.0'
