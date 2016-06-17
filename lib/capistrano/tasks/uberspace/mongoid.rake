@@ -13,14 +13,15 @@ namespace :uberspace do
 
             }}
           else
+            database_name = (fetch(:database_name) || fetch(:application))
             default_params = {'default' => {
-                'database' => (fetch(:database_name) || fetch(:application)),
+                'database' => database_name,
                 'hosts' => [
                     "#{fetch(:mongo_host)}:#{fetch(:mongo_port)}"
                 ],
                 'options' => {'password' => fetch(:mongo_password),
                               'user' => fetch(:mongo_user),
-                              'auth_source' => fetch(:application),
+                              'auth_source' => database_name,
                               'roles' => ['dbOwner']}
             }}
           end
