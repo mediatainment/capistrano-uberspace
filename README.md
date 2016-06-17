@@ -51,6 +51,7 @@ set :user, 'uberspace-user'
 set :environment, :production
 set :branch, :production
 set :domain, 'my-subdomain.example.tld'
+set :database_name: 'myDbName'f
 ```
 
 Optionally, you may specify HTTP BASIC AUTH authentication in your stage definition:
